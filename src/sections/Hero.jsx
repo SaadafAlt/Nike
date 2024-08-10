@@ -6,6 +6,7 @@ import ShoeCard from "../components/ShoeCard";
 import { useState } from "react";
 
 const Hero = () => {
+  // pass in bigShoe1 as the currently selected base shoe img
   const [bigShoeImg, setBigShoeImg] = useState(bigShoe1);
   return (
     <section
@@ -40,7 +41,7 @@ const Hero = () => {
 
       <div className="relative flex-1 flex justify-center items-center
       xl:min-h-screen max-xl:py-40 bg-primary bg-hero bg-cover bg-center">
-        <img src={bigShoe1}
+        <img src={bigShoeImg}
         alt="shoe collection"
         width={610}
         height={500}
