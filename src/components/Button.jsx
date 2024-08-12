@@ -4,6 +4,7 @@ const Button = ({
   backgroundColor,
   textColor,
   borderColor,
+  fullWidth,
 }) => {
   return (
     <button
@@ -13,8 +14,7 @@ const Button = ({
           backgroundColor
             ? `${backgroundColor} ${textColor} ${borderColor}`
             : "bg-coral-red text-white border-coral-red"
-        } rounded-full`}
-        // alt. try adding `w-full` directly to the line above.
+        } rounded-full && ${fullWidth && "w-full"}`}  // if rounded-full AND fullWidth truthy, apply w-full
     >
       {label}
 
